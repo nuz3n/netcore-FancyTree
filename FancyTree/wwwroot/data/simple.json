@@ -1,0 +1,14 @@
+[
+  {
+    "key":  "logs", 
+    "title": "logs",
+    "folder": true,
+    "lazy": true
+  },
+  {
+    "key": "Uploads",
+    "title": "Uploads",
+    "folder": true,
+    "lazy": true
+  }
+]

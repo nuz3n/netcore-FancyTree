@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Include="wwwroot\Vendor\fancytree\dist\jquery.fancytree.min.js" />
+    <None Include="wwwroot\Vendor\fancytree\dist\modules\jquery.fancytree.ariagrid.js" />
+    <None Include="wwwroot\Vendor\fancytree\dist\modules\jquery.fancytree.childcounter.js" />
+    <None Include="wwwroot\Vendor\fancytree\dist\modules\jquery.fancytree.clones.js" />
+    <None Include="wwwroot\Vendor\fancytree\dist\modules\jquery.fancytree.columnview.js" />
+    <None Include="wwwroot\Vendor\fancytree\dist\modules\jquery.fancytree.dnd.js" />
+    <None Include="wwwroot\Vendor\fancytree\dist\modules\jquery.fancytree.dnd5.js" />
+    <None Include="wwwroot\Vendor\fancytree\dist\modules\jquery.fancytree.edit.js" />
+    <None Include="wwwroot\Vendor\fancytree\dist\modules\jquery.fancytree.filter.js" />
+    <None Include="wwwroot\Vendor\fancytree\dist\modules\jquery.fancytree.fixed.js" />
+    <None Include="wwwroot\Vendor\fancytree\dist\modules\jquery.fancytree.glyph.js" />
+    <None Include="wwwroot\Vendor\fancytree\dist\modules\jquery.fancytree.grid.js" />
+    <None Include="wwwroot\Vendor\fancytree\dist\modules\jquery.fancytree.gridnav.js" />
+    <None Include="wwwroot\Vendor\fancytree\dist\modules\jquery.fancytree.js" />
+    <None Include="wwwroot\Vendor\fancytree\dist\modules\jquery.fancytree.logger.js" />
+    <None Include="wwwroot\Vendor\fancytree\dist\modules\jquery.fancytree.menu.js" />
+    <None Include="wwwroot\Vendor\fancytree\dist\modules\jquery.fancytree.multi.js" />
+    <None Include="wwwroot\Vendor\fancytree\dist\modules\jquery.fancytree.persist.js" />
+    <None Include="wwwroot\Vendor\fancytree\dist\modules\jquery.fancytree.table.js" />
+    <None Include="wwwroot\Vendor\fancytree\dist\modules\jquery.fancytree.themeroller.js" />
+    <None Include="wwwroot\Vendor\fancytree\dist\modules\jquery.fancytree.ui-deps.js" />
+    <None Include="wwwroot\Vendor\fancytree\dist\modules\jquery.fancytree.wide.js" />
+    <None Include="wwwroot\Vendor\fancytree\dist\skin-bootstrap\ui.fancytree.css" />
+    <None Include="wwwroot\Vendor\fancytree\dist\skin-bootstrap\ui.fancytree.less" />
+    <None Include="wwwroot\Vendor\fancytree\dist\skin-bootstrap\ui.fancytree.min.css" />
+    <None Include="wwwroot\Vendor\fancytree\dist\skin-bootstrap\vline-rtl.gif" />
+    <None Include="wwwroot\Vendor\fancytree\dist\skin-bootstrap\vline.gif" />
+    <None Include="wwwroot\Vendor\fancytree\dist\skin-common.less" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="wwwroot\image\" />
+  </ItemGroup>
+
+</Project>

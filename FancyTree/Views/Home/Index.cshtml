@@ -1,0 +1,84 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+
+<table id="treegrid">
+    <thead>
+    <tr>
+        <th></th>
+        <th class="alignCenter">download</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td></td>
+        <td class="alignCenter" width="100px">
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+@section Scripts {
+    <link href="~/Vendor/fancytree/dist/skin-win8/ui.fancytree.css" rel="stylesheet" />
+    <script src="~/Vendor/fancytree/dist/jquery.fancytree-all-deps.js"></script>
+
+    <script src="~/Vendor/jquery.fileDownload.js"></script>
+
+    <style type="text/css">
+        table.fancytree-ext-table {
+            width: 80%;
+        }
+
+        th.alignCenter {
+            text-align: center;
+        }
+
+        td.alignCenter {
+            text-align: center;
+        }
+    </style>
+
+    <script>
+
+        function DownloadFile(path) {
+            var linkDownloadFile = '/api/FileService/DownloadFile?path=' + path;
+            $.fileDownload(linkDownloadFile)
+                .done(function () { alert('File download a success!'); })
+                .fail(function () { alert('File download failed!'); });
+        }
+
+        $(function () {  // on page load
+
+            $("#treegrid").fancytree({
+                extensions: ["table"],
+                autoCollapse: true,
+                source: {
+                    url: "/api/FileService/HeadList"
+                },
+                lazyLoad: function (event, data) {
+                    data.result = {
+                        data: {
+                            path: data.node.key
+                        },
+                        url: "/api/FileService/NodeList"
+                    };
+                },
+                renderColumns: function (event, data) {
+                    var node = data.node,
+                        $tdList = $(node.tr).find(">td");
+                    if (!node.folder) {
+                        var linkDownload = '<a class="downloadFile" onclick="DownloadFile(\'' + node.key + '\')"><img src="/image/icons8-download-24.png" /></a>';
+                        $tdList.eq(1).html(linkDownload);
+                    }
+                }
+            });
+        });
+    </script>
+}
